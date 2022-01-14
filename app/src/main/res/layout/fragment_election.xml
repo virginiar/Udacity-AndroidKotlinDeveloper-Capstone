@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  DONE: Add node to connect Election ViewModel -->
+    <data>
+        <variable
+            name="electionViewModel"
+            type="com.example.android.politicalpreparedness.election.ElectionsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.politicalpreparedness.MainActivity">
+
+        <!--  DONE: Add Upcoming Election Recycler and Header -->
+        <TextView
+            android:id="@+id/upcomingElectionsTitle"
+            style="@style/title_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/upcoming_elections_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomingElectionsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/upcomingElectionsTitle"
+            app:layout_constraintBottom_toTopOf="@id/savedElectionsTitle"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/viewholder_election" />
+
+        <ImageView
+            android:id="@+id/status_elections_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upcomingElectionsTitle"
+            app:layout_constraintBottom_toTopOf="@id/savedElectionsTitle"
+            app:apiStatus="@{electionViewModel.status}" />
+
+        <!--  DONE: Add Saved Election Recycler and Header -->
+        <TextView
+            android:id="@+id/savedElectionsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/title_style"
+            android:text="@string/saved_elections_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/savedElectionsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/savedElectionsTitle"
+            tools:listitem="@layout/viewholder_election" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

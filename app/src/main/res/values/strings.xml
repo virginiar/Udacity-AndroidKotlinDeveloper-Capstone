@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Political Preparedness</string>
+
+    <!--  DONE: Add necessary string values -->
+    <!-- Launch screen -->
+    <string name="upcoming_button">Upcoming elections</string>
+    <string name="representative_button">Find my representatives</string>
+    <string name="logo_content_description">Ballot Logo</string>
+
+    <!-- Elections screen-->
+    <string name="upcoming_elections_title">Upcoming Elections</string>
+    <string name="saved_elections_title">Saved Elections</string>
+
+    <!-- Voter Info screen-->
+    <string name="follow_election_button">Follow Election</string>
+    <string name="unfollow_election_button">Unfollow Election</string>
+    <string name="state_header_information">Election Information</string>
+    <string name="state_voting_locations">Voting Locations</string>
+    <string name="state_ballot_information">Ballot Information</string>
+    <string name="state_correspondence_header">State Correspondence Address</string>
+
+    <!-- Representative screen-->
+    <string name="representative_search_title">Representative Search</string>
+    <string name="address_line_1_hint">Address Line 1</string>
+    <string name="address_line_2_hint">Address Line 2</string>
+    <string name="city_hint">City</string>
+    <string name="zip_hint">Address Line Zip</string>
+    <string name="location_button">Use my location</string>
+    <string name="representatives_title">My representatives</string>
+    <string name="photo_description">Representative photo</string>
+    <string name="www_icon_description">Web icon</string>
+    <string name="facebook_icon_description">Facebook icon</string>
+    <string name="twitter_icon_description">Twitter icon</string>
+
+
+</resources>
